@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu - QuickBite</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style3.css') }}"
+    />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a href="/">
+        <img
+          src="{{ url_for('static', filename='QuickBite-logo.png') }}"
+          alt="QuickBite Logo"
+          class="logo-img"
+        />
+      </a>
+      <div class="search-wrapper">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search menu..."
+        />
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/menu" class="active">Menu</a>
+        <a href="/cart" id="cart-link">Cart ({{ cart_count }})</a>
+        <a href="/login">Login</a>
+      </nav>
+    </header>
+
+    <main class="menu-section">
+      <h1>Explore Our Delicious Menu</h1>
+      <div class="menu-grid">
+        {% for item in menu %}
+        <div class="card">
+          <img
+            src="{{ url_for('static', filename='uploads/' ~ item.image) }}"
+            alt="{{ item.name }}"
+            class="item-img"
+          />
+
+          <div class="item-info">
+            <h3>{{ item.name }}</h3>
+            <p>₹{{ item.price }}</p>
+            <p class="restaurant-name">From: {{ item.restaurant_name }}</p>
+          </div>
+
+          <!-- Add to Cart Form (with fetch) -->
+          <form method="POST" action="/add-to-cart" class="cart-form add-form">
+            <input type="hidden" name="item_id" value="{{ item.id }}" />
+            <input
+              type="hidden"
+              name="restaurant_name"
+              value="{{ item.restaurant_name }}"
+            />
+            <input type="hidden" name="quantity" value="1" />
+            <button type="submit" class="menu-btn">Add to Cart</button>
+          </form>
+
+          <!-- Order Now Form (standard form submit) -->
+          <form method="POST" action="/order-now" class="cart-form">
+            <input type="hidden" name="item_id" value="{{ item.id }}" />
+            <input
+              type="hidden"
+              name="restaurant_name"
+              value="{{ item.restaurant_name }}"
+            />
+            <input type="hidden" name="quantity" value="1" />
+            <button type="submit" class="menu-btn">Order Now</button>
+          </form>
+        </div>
+        {% endfor %}
+      </div>
+    </main>
+
+    <footer>&copy; 2025 QuickBite. All rights reserved.</footer>
+
+    <div id="snackbar" class="snackbar">Item added to cart</div>
+
+    <script>
+      // Search functionality
+      document
+        .getElementById("search-input")
+        .addEventListener("input", function () {
+          const value = this.value.toLowerCase();
+          document.querySelectorAll(".card").forEach((card) => {
+            const name = card.querySelector("h3").textContent.toLowerCase();
+            card.style.display = name.includes(value) ? "flex" : "none";
+          });
+        });
+
+      // Add to cart using fetch
+      document.querySelectorAll(".add-form").forEach((form) => {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const formData = new FormData(form);
+
+          fetch("/add-to-cart", {
+            method: "POST",
+            body: formData,
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              // Show snackbar
+              const snackbar = document.getElementById("snackbar");
+              snackbar.classList.add("show");
+              setTimeout(() => snackbar.classList.remove("show"), 2000);
+
+              // Update cart count
+              if (data.cart_count !== undefined) {
+                document.getElementById(
+                  "cart-link"
+                ).textContent = `Cart (${data.cart_count})`;
+              }
+            })
+            .catch((err) => {
+              console.error("Add to cart failed:", err);
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

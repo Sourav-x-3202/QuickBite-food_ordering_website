@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickBite - Order Food Instantly</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f8f8f8;
+        color: #333;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 2rem;
+        text-align: center;
+        background: #daa520;
+        color: #800000;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin-bottom: 2rem;
+        color: #ffffff;
+      }
+
+      .cta-btn {
+        background: #800000;
+        color: white;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .cta-btn:hover {
+        background: #a52a2a;
+      }
+
+      .logo {
+        height: 90px;
+        margin-bottom: 1rem;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 3rem 2rem;
+        background: #fff;
+        text-align: center;
+      }
+
+      .features div {
+        background: #f9f9f9;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .features h3 {
+        color: #daa520;
+        margin-bottom: 0.5rem;
+      }
+
+      .feature-box {
+        background: #f9f9f9;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+      .support-center {
+        grid-column: 1 / -1;
+        max-width: 250px;
+        margin: 0 auto;
+      }
+
+      .admin-section {
+        background: #027023;
+        color: #fff;
+        padding: 4rem 2rem;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .admin-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #daa520;
+      }
+
+      .admin-section p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin: auto;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background: #f2f2f2;
+        font-size: 0.9rem;
+        color: #800000;
+      }
+
+      @media (max-width: 600px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="hero">
+      <img
+        src="{{ url_for('static', filename='quickbite-logo.png') }}"
+        alt="QuickBite Logo"
+        class="logo"
+      />
+      <h1>Welcome to QuickBite</h1>
+      <p>
+        Delicious meals delivered fast — order your favorite food with just a
+        few clicks!
+      </p>
+      <a href="/menu" class="cta-btn">View Menu</a>
+    </header>
+
+    <section class="features">
+      <div>
+        <h3>Fast Delivery</h3>
+        <p>Your order will arrive hot and fresh in no time.</p>
+      </div>
+      <div>
+        <h3>Curated Menu</h3>
+        <p>Only the best dishes from top-rated chefs.</p>
+      </div>
+      <div>
+        <h3>Secure Payments</h3>
+        <p>Pay safely with cards or cash on delivery.</p>
+      </div>
+      <div>
+        <h3>24/7 Support</h3>
+        <p>We're here to help you anytime, day or night.</p>
+      </div>
+      <div>
+        <h3>Support Center</h3>
+        <p>Need help? Contact our support team for any queries or issues.</p>
+        <a href="/contact">Contact Us</a>
+      </div>
+
+      <div>
+        <h3>Order Now</h3>
+        <p>
+          Ready to satisfy your cravings? Click below to explore our menu and
+          place your order.
+        </p>
+        <a href="/menu">Order Now</a>
+      </div>
+    </section>
+
+    <section class="admin-section">
+      <h2>For Admin</h2>
+      <p>
+        Access the dashboard to manage orders, menu items, and view analytics.
+      </p>
+      <br /><br />
+      <a href="{{ url_for('admin_login') }}" class="cta-btn">Login as Admin</a>
+
+      <a href="{{ url_for('admin_register') }}" class="cta-btn"
+        >Register Your Restaurant</a
+      >
+    </section>
+
+    <footer>&copy; 2025 QuickBite. All rights reserved.</footer>
+  </body>
+</html>

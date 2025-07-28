@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ac5836c4-7e7e-463c-97e8-a84d1bbef90d",
+    "name": "shahi paneer",
+    "price": 150.0,
+    "image": "shahi-paneer.jpg",
+    "category": "indian",
+    "restaurant_name": "khao kilao",
+    "admin": "jiyo"
+  },
+  {
+    "id": "dbb3563c-e6dd-4fe8-b35e-1d7037c08726",
+    "name": "neem patti",
+    "price": 15.0,
+    "image": "neem_patti.jpg",
+    "category": "indian",
+    "restaurant_name": "khao kilao",
+    "admin": "real food india"
+  }
+]

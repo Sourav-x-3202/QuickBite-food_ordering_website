@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Admin – QuickBite</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/superadmin.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='QuickBite-Logo.png') }}"
+    />
+  </head>
+  <body>
+    <div class="container add-admin-container">
+      <h2 class="form-title">Add New Admin</h2>
+
+      <!-- Flash Messages -->
+      {% with messages = get_flashed_messages() %} {% if messages %} {% for
+      message in messages %}
+      <div class="flash">{{ message }}</div>
+      {% endfor %} {% endif %} {% endwith %}
+
+      <form method="POST" action="/superadmin/add-admin" class="admin-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter admin username"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="business">Restaurant / Business Name</label>
+          <input
+            type="text"
+            id="business"
+            name="business"
+            placeholder="e.g., Pizza Point"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="category">Cuisine Category</label>
+          <input
+            type="text"
+            id="category"
+            name="category"
+            placeholder="e.g., Fast Food, Indian, Chinese"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Register Admin" class="btn btn-success" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout – QuickBite</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='QuickBite-Logo.png') }}"
+    />
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle("dark");
+        localStorage.setItem(
+          "theme",
+          document.body.classList.contains("dark") ? "dark" : "light"
+        );
+      }
+      window.onload = () => {
+        if (localStorage.getItem("theme") === "dark")
+          document.body.classList.add("dark");
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div>
+        <img
+          src="{{ url_for('static', filename='QuickBite-Logo.png') }}"
+          alt="QuickBite Logo"
+        />
+      </div>
+      <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('menu') }}">Menu</a>
+        <a href="{{ url_for('cart') }}">Cart ({{ cart_items|length }})</a>
+        {% if 'user' in session %}
+        <a href="{{ url_for('logout') }}">Logout</a>
+        {% else %}
+        <a href="{{ url_for('login') }}">Login</a>
+        {% endif %}
+      </nav>
+      <button class="toggle-theme-btn" onclick="toggleTheme()">🌓 Theme</button>
+    </header>
+
+    <!-- Checkout Content -->
+    <main class="container">
+      <h1 class="center">Checkout</h1>
+
+      {% if cart_items %}
+      <div class="card">
+        <h2>Order Summary</h2>
+        <ul>
+          {% for item in cart_items %}
+          <li>{{ item.name }} (x{{ item.quantity }}) - ₹{{ item.total }}</li>
+          {% endfor %}
+        </ul>
+        <h3>Total Amount: ₹{{ cart_items | sum(attribute='total') }}</h3>
+
+        <form action="{{ url_for('checkout') }}" method="POST" class="form">
+          <label for="address">Delivery Address:</label>
+          <textarea name="address" id="address" required></textarea>
+
+          <label for="payment">Payment Method:</label>
+          <select name="payment" id="payment" required>
+            <option value="">--Select--</option>
+            <option value="Cash on Delivery">Cash on Delivery</option>
+            <option value="UPI">UPI</option>
+            <option value="Card">Credit/Debit Card</option>
+          </select>
+
+          <button type="submit" class="btn">Place Order</button>
+        </form>
+      </div>
+      {% else %}
+      <div class="card center">
+        <p>Your cart is empty.</p>
+        <a href="{{ url_for('menu') }}" class="btn">Browse Menu</a>
+      </div>
+      {% endif %}
+    </main>
+
+    <footer>&copy; 2025 QuickBite. All rights reserved.</footer>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Login – QuickBite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='QuickBite-Logo.png') }}"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <img
+        src="{{ url_for('static', filename='QuickBite-Logo.png') }}"
+        alt="QuickBite Logo"
+        class="logo"
+      />
+      <h1>Admin Login</h1>
+      <p>Access the dashboard to manage menu and orders</p>
+    </header>
+
+    <main class="container">
+      <section class="form-card">
+        <h2 class="center-text">Login as Admin</h2>
+        {% if error %}
+        <p class="error center-text">{{ error }}</p>
+        {% endif %}
+
+        <form action="{{ url_for('admin_login') }}" method="POST">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter admin username"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter admin password"
+            required
+          />
+
+          <button type="submit" class="primary-btn">Login</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>&copy; 2025 QuickBite. All rights reserved.</footer>
+  </body>
+</html>

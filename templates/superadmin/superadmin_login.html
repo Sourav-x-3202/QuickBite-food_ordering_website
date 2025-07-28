@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Super Admin Login – QuickBite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='QuickBite-Logo.png') }}"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <img
+        src="{{ url_for('static', filename='QuickBite-Logo.png') }}"
+        alt="QuickBite Logo"
+        class="logo"
+      />
+      <h1>Super Admin Login</h1>
+      <p>Access full control over QuickBite admins, users, menu, and orders</p>
+    </header>
+
+    <main class="container">
+      <section class="form-card">
+        <h2 class="center-text">Super Admin Access</h2>
+
+        {% with messages = get_flashed_messages() %} {% if messages %}
+        <div class="error center-text">
+          {% for msg in messages %}
+          <p>{{ msg }}</p>
+          {% endfor %}
+        </div>
+        {% endif %} {% endwith %}
+
+        <form method="POST" action="{{ url_for('superadmin_login') }}">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter super admin username"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+            required
+          />
+
+          <button type="submit" class="primary-btn">Login</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>&copy; 2025 QuickBite. All rights reserved.</footer>
+  </body>
+</html>

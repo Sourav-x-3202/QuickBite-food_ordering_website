@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register - QuickBite Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='QuickBite-Logo.png') }}"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <img
+        src="{{ url_for('static', filename='QuickBite-Logo.png') }}"
+        alt="QuickBite Logo"
+        class="logo"
+      />
+      <h1>QuickBite Admin Registration</h1>
+      <p>Register your restaurant and manage your menu & orders</p>
+    </header>
+
+    <main class="container">
+      <section class="form-card">
+        <h2 class="center-text">Admin Sign Up</h2>
+
+        {% with messages = get_flashed_messages() %} {% if messages %}
+        <div class="error center-text">
+          {% for msg in messages %}
+          <p>{{ msg }}</p>
+          {% endfor %}
+        </div>
+        {% endif %} {% endwith %}
+
+        <form action="{{ url_for('admin_register') }}" method="POST">
+          <label for="username">Username</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Choose a username"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Create a secure password"
+            required
+          />
+
+          <label for="business">Business Name</label>
+          <input
+            id="business"
+            name="business"
+            type="text"
+            placeholder="e.g. Tandoori Tales"
+            required
+          />
+
+          <label for="category">Food Category</label>
+          <input
+            id="category"
+            name="category"
+            type="text"
+            placeholder="e.g. Indian, Chinese"
+            required
+          />
+
+          <button type="submit" class="primary-btn">Register</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>&copy; 2025 QuickBite. All rights reserved.</footer>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Admin Dashboard - QuickBite</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <img
+        src="{{ url_for('static', filename='QuickBite-Logo.png') }}"
+        alt="QuickBite Logo"
+        class="logo"
+      />
+      <h1>Super Admin Dashboard</h1>
+      <p>Manage Admins, Users, Menu Items, and Orders</p>
+      <div class="logout-container">
+        <a href="{{ url_for('superadmin_logout') }}" class="logout-btn"
+          >Logout</a
+        >
+      </div>
+    </header>
+
+    <main class="container admin-container">
+      {% with messages = get_flashed_messages() %} {% if messages %}
+      <div class="alert success">
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+      {% endif %} {% endwith %}
+
+      <!-- Admins -->
+      <h2>Admins</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Business</th>
+            <th>Category</th>
+            <th>Total Orders</th>
+            <th>Total Revenue</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for admin in admins %}
+          <tr>
+            <td>{{ admin.username }}</td>
+            <td>{{ admin.business }}</td>
+            <td>{{ admin.category }}</td>
+            <td>{{ admin.total_orders }}</td>
+            <td>&#8377;{{ admin.total_revenue }}</td>
+            <td>
+              <a
+                href="{{ url_for('delete_admin', username=admin.username) }}"
+                class="btn btn-danger"
+                >Delete</a
+              >
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <!-- Users -->
+      <h2>Users</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr>
+            <td>{{ user.username }}</td>
+            <td>
+              <a
+                href="{{ url_for('delete_user', username=user.username) }}"
+                class="btn btn-danger"
+                >Delete</a
+              >
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <!-- Menu Items -->
+      <h2>All Menu Items</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Restaurant</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in menu %}
+          <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.category }}</td>
+            <td>&#8377;{{ item.price }}</td>
+            <td>{{ item.restaurant_name }}</td>
+            <td>
+              <a
+                href="{{ url_for('superadmin_delete_menu', item_id=item.id) }}"
+                class="btn btn-danger"
+                >Delete</a
+              >
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <!-- Orders -->
+      <h2>All Orders</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Total</th>
+            <th>Items</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for order in orders %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>&#8377;{{ order.total }}</td>
+            <td>
+              <ul>
+                {% for item in order["items"] %}
+                <!-- ✅ Corrected -->
+                <li>{{ item.name }} × {{ item.quantity }}</li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <!-- Button -->
+      <div class="button-group">
+        <a href="{{ url_for('add_admin') }}" class="primary-btn"
+          >Add New Admin</a
+        >
+      </div>
+    </main>
+
+    <footer>&copy; 2025 QuickBite. All rights reserved.</footer>
+  </body>
+</html>

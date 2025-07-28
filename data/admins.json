@@ -1,0 +1,30 @@
+[
+  {
+    "username": "jiyo",
+    "password": "scrypt:32768:8:1$eYbkyxADipW5iV6r$2391b5ab377dce48ed284a34aac8e3b811b9237b1120882505d65a05329e9511bba0a111b689bf12138104c54e88ad938f7fc28bda3530a7e6aabc63c578df0f",
+    "business": "khao kilao",
+    "category": "chinese",
+    "logo": "0a2a2084ae0a4a73bc735dec2d104bc6.png"
+  },
+  {
+    "username": "beastman",
+    "password": "scrypt:32768:8:1$GVfG1C3uOZY6nVSG$33a632491c1155f8e919017fa86a519d965adbae70e0505e89f96349926be7076734bf177996ea79e1cb61afc67d92fc400a970deb4660b732d0f36dc91d291a",
+    "business": "beast food",
+    "category": "europian",
+    "logo": "9a5a6c98c3764c16a552f88ac2fca04a.png"
+  },
+  {
+    "username": "real food",
+    "password": "scrypt:32768:8:1$x5bjhxRqwzp0j5za$d9d0b9b6985f1e29f9aede2902420066db8d76c06ba013e156defce2834a53753d2afc2005fb823936f5cd84791dcee8eef66a2608dc7bb60244f59eb1e807f0",
+    "business": "Tandoori Tales",
+    "category": "indian",
+    "logo": "26bcc750b26e4dcba276de8385f3e176.png"
+  },
+  {
+    "username": "real food india",
+    "password": "scrypt:32768:8:1$mt0ABIgOkGzNjnkw$720492b70237b6525d1488289a33c76de18aae830866e487bd29b2aad37ef0c29de3f76028fb51a61e829ed03465304ea89ab25a3d807551e63853ca09fdd2cc",
+    "business": "khao kilao",
+    "category": "vetnamese",
+    "logo": "293048b403164d3b95ba8177e720c659.png"
+  }
+]

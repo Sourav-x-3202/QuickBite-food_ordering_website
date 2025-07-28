@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name": "momos",
+    "price": 899,
+    "image": "https://media.istockphoto.com/id/1748107051/photo/veg-steamed-momo-nepalese-traditional-dish-momo-stuffed-with-vegetables-and-then-cooked-and.jpg?s=612x612&w=0&k=20&c=EY_opoDEEhu1_hbyeOcdIg3kZA1Pt7FEOa2vkuJrZTA="
+  },
+  {
+    "id": 2,
+    "name": "soyabean chaap",
+    "price": 549,
+    "image": "https://media.istockphoto.com/id/1487807834/photo/vegetarian-soya-malai-chaap.jpg?s=612x612&w=0&k=20&c=y1N6LjDO0k42QJ1Abh8hmlU3EuNwVqVngZU11vq1bq8="
+  },
+  {
+    "id": 3,
+    "name": "Chow Mein",
+    "price": 725,
+    "image": "https://media.istockphoto.com/id/1184359662/photo/stir-fried-noodles-close-up.jpg?s=612x612&w=0&k=20&c=1pdlG0GTjYN338wj2Dm_M7VWBJNfWQGMvXl9giMgPE4="
+  },
+  {
+    "id": 4,
+    "name": "Cheesy Pizza",
+    "price": 199,
+    "image": "https://media.istockphoto.com/id/938742222/photo/cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=D1z4xPCs-qQIZyUqRcHrnsJSJy_YbUD9udOrXpilNpI="
+  },
+  {
+    "id": 5,
+    "name": "Veg Cheezy Burger",
+    "price": 99,
+    "image": "https://media.istockphoto.com/id/1456582718/photo/burger-close-up-veg-burger.jpg?s=612x612&w=0&k=20&c=-neLm3XQDbBKPDaUEIrl49bLA0odcuCKstSruNFNgGo="
+  },
+  {
+    "id": 6,
+    "name": "Hakka Noodles",
+    "price": 149,
+    "image": "https://media.istockphoto.com/id/1159004213/photo/schezwan-noodles-with-vegetables-in-a-plate-top-view.jpg?s=612x612&w=0&k=20&c=KdgjVFxPq7mgzwYI--_h7w71dXM9eLMeFUey_iJCTwo="
+  },
+  {
+    "id": 7,
+    "name": "French Fries",
+    "price": 79,
+    "image": "https://media.istockphoto.com/id/148349643/photo/plate-of-delicious-looking-french-fries.jpg?s=612x612&w=0&k=20&c=NPOBoHI2MMST54tc1GwpFcXOaCEECRrtht1vlzXs3FE="
+  },
+  {
+    "id": 8,
+    "name": "Caesar Salad",
+    "price": 699,
+    "image": "https://media.istockphoto.com/id/1270554485/photo/close-up-image-of-chicken-caesar-salad-in-bowl-lettuce-red-onion-beetroot-leaves-cubed-bacon.jpg?s=612x612&w=0&k=20&c=15RKYV8_lNPgSZJ7Lc-QnX0hfYV86racKrn6JpBu2_8="
+  },
+  {
+    "id": 9,
+    "name": "Chocolate Cake",
+    "price": 499,
+    "image": "https://media.istockphoto.com/id/1312968249/photo/contemporary-chocolate-truffle-layer-cake.jpg?s=612x612&w=0&k=20&c=2HCGt_fLh3WR1TEHtYDtkhZG2iw2ezAevlpHlZeTTVE="
+  },
+  {
+    "id": 10,
+    "name": "Iced Tea",
+    "price": 299,
+    "image": "https://plus.unsplash.com/premium_photo-1664392087859-815b337c3324?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SWNlZCUyMFRlYXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 11,
+    "name": "Spaghetti Carbonara",
+    "price": 1099,
+    "image": "https://media.istockphoto.com/id/943785646/photo/spaghetti-carbonara-with-garlic-bread.webp?a=1&b=1&s=612x612&w=0&k=20&c=A48lw7nAML-umMfqKbMfVe3irvcAaOkBPUpKVOFhP48="
+  },
+  {
+    "id": 12,
+    "name": "Grilled Chicken Salad",
+    "price": 849,
+    "image": "https://media.istockphoto.com/id/1349067702/photo/greek-salad-with-vinaigrette-dressing-topped-with-grilled-chicken.webp?a=1&b=1&s=612x612&w=0&k=20&c=yCKdJ_Ggu4GAJxsSkVTOk68N3SnPO-zXu4x4CuvUnK0="
+  },
+  {
+    "id": 13,
+    "name": "cold coffee",
+    "price": 899,
+    "image": "https://media.istockphoto.com/id/1366672341/photo/glass-with-ice-and-coffee.jpg?s=612x612&w=0&k=20&c=lR7zj__gNDmO0aXfjV8N9Ti-WnOx2iuNxRRyEDvFCi4="
+  },
+  {
+    "id": 14,
+    "name": "sandwich",
+    "price": 841,
+    "image": "https://media.istockphoto.com/id/1250442490/photo/cheese-sandwich.jpg?s=612x612&w=0&k=20&c=eisZ13UyDbV333BC3C3nupQIQO6zfJTwCVMvRPuJ5zc="
+  },
+  {
+    "id": 15,
+    "name": "rice and curry",
+    "price": 809,
+    "image": "https://media.istockphoto.com/id/1165889522/photo/indian-food-chicken-vindaloo-curry-over-basmati-rice.jpg?s=612x612&w=0&k=20&c=tRUPBqWOHYy7DAEeFYSlYNVjTpj7vjLf9QM5iZyGHSk="
+  },
+  {
+    "id": 16,
+    "name": "seekh kebab",
+    "price": 949,
+    "image": "https://media.istockphoto.com/id/1398259439/photo/chicken-seekh-kebab.jpg?s=612x612&w=0&k=20&c=y80ngqn2axTW1nWUCTF2b9Ejxwsu21xt5IYsWmOfO-U="
+  },
+  {
+    "id": 17,
+    "name": "lemonade",
+    "price": 49,
+    "image": "https://media.istockphoto.com/id/500202440/photo/freshly-made-lemonade-with-a-hint-of-mint.jpg?s=612x612&w=0&k=20&c=sn3OLyO3awUjDhX55Qjsx44ftQ8ABqA8zMS0zjPIxDA="
+  },
+  {
+    "id": 18,
+    "name": "tikka",
+    "price": 89,
+    "image": "https://media.istockphoto.com/id/2043767125/photo/lemon-being-squeezed-over-shrimp-tandoori.jpg?s=612x612&w=0&k=20&c=fWMSTQ8hwZIpaGye192QRLDVXWd_cc8mXMaAxCp1mfg="
+  },
+  {
+    "id": 19,
+    "name": "Grilled sandwich",
+    "price": 84,
+    "image": "https://media.istockphoto.com/id/1388023176/photo/cream-cheese-bacon-sandwiches-grilled-sandwiches-with-a-spread-made-of-combination-of-cream.jpg?s=612x612&w=0&k=20&c=9NH6twG3h3K9C-4P_PdA8A6y8jPIhE3NYLmo6bGhiHg="
+  },
+  {
+    "id": 20,
+    "name": "panner sabji",
+    "price": 102,
+    "image": "https://media.istockphoto.com/id/1157234107/photo/traditional-bozbash-meat-meal-wtih-tomato-onion-sauce.jpg?s=612x612&w=0&k=20&c=ooh-L3EUrot8x_ssTLU0y4IouHISdDcwXz1I8h9WPQQ="
+  },
+  {
+    "name": "caddi",
+    "price": 59,
+    "image": "https://media.istockphoto.com/id/510015746/photo/indian-food-specialties-indian-dish-malai-kofta-or-veg-kofta.jpg?s=612x612&w=0&k=20&c=mHAiUzR6uoHwF1nLHqNOOKwY7EnhmkdG18MZLsvrJw0=",
+    "category": "indian food"
+  }
+]
