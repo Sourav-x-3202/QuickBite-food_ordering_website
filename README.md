@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🍔 QuickBite
 
 **QuickBite** is a full-stack, multi-role food ordering web application designed for restaurants, food vendors, and digital ordering services. Built with Python's **Flask framework**, it features a **modular architecture**, **local file storage**, and **role-based access** for **Customers**, **Restaurant Admins**, and a **Super Admin**. QuickBite is fully self-contained and works offline, making it suitable for lightweight POS systems and standalone deployments.
@@ -209,3 +210,7 @@ See the [LICENSE](LICENSE) file for details.
 Developer & Maintainer  
 📧 your.email@example.com  
 🌐 [GitHub Profile](https://github.com/your-username)
+=======
+# QuickBite-food_ordering_website
+QuickBite is a simple Flask-based food ordering app with local storage, cart management, and an admin panel — no external databases needed.
+>>>>>>> 000ee56a4ac0f035bb6592af58556fb52ec7c00e
