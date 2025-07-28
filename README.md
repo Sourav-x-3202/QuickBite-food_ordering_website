@@ -1,11 +1,11 @@
-<<<<<<< HEAD
-# 🍔 QuickBite
+
+#  QuickBite
 
 **QuickBite** is a full-stack, multi-role food ordering web application designed for restaurants, food vendors, and digital ordering services. Built with Python's **Flask framework**, it features a **modular architecture**, **local file storage**, and **role-based access** for **Customers**, **Restaurant Admins**, and a **Super Admin**. QuickBite is fully self-contained and works offline, making it suitable for lightweight POS systems and standalone deployments.
 
 ---
 
-## 📌 Table of Contents
+##  Table of Contents
 
 - [Features](#-features)
 - [Architecture](#-architecture-overview)
@@ -22,36 +22,36 @@
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🔒 Authentication & Role Management
+###  Authentication & Role Management
 - Separate login and registration for **Users**, **Admins**, and **Super Admin**
 - Secure session management with automatic role segregation
 - Password masking and validation
 
-### 🍽️ Menu Management
+###  Menu Management
 - Admins can **create**, **edit**, and **delete** menu items
 - Upload and display **food item images**
 - Auto-generated restaurant **logo creation** for brand identity
 
-### 🛒 Customer Ordering
+###  Customer Ordering
 - Real-time cart functionality with live item count
 - "Add to Cart" and "Order Now" workflows
 - Menu filtering and responsive layout for all devices
 
-### 📦 Order Management
+###  Order Management
 - Orders are stored per-user and per-admin
 - Admins can view and track orders placed through their restaurant
 - Orders stored locally as JSON for persistence and analysis
 
-### 🧑‍✈️ Super Admin Privileges
+###  Super Admin Privileges
 - Global access to **all admin data**, **menu items**, and **user orders**
 - Control panel for monitoring platform activity
 - Admin onboarding and deletion
 
 ---
 
-## 🧠 Architecture Overview
+##  Architecture Overview
 
 QuickBite is structured into **three isolated logical layers**, with **clean routing** and **template inheritance**:
 
@@ -68,7 +68,7 @@ Local JSON Files  ⟷ Static Uploads
 
 ---
 
-## 🧰 Technology Stack
+##  Technology Stack
 
 | Component     | Tech/Tool        |
 |---------------|------------------|
@@ -83,24 +83,24 @@ Local JSON Files  ⟷ Static Uploads
 
 ---
 
-## 🔐 Roles & Responsibilities
+##  Roles & Responsibilities
 
-### 👤 Customer
+###  Customer
 - Register / Login
 - Browse menu items by category
 - Add to cart, place orders
 - View live cart count and feedback
 
-### 🧑‍🍳 Restaurant Admin
+###  Restaurant Admin
 - Register their restaurant (with auto logo creation)
 - Login → Manage Menu → View Orders
 
-### 👑 Super Admin
+###  Super Admin
 - Login → View all admins, menus, and orders → Full control access
 
 ---
 
-## 📁 Folder Structure
+##  Folder Structure
 
 ```
 quickbite/
@@ -129,14 +129,14 @@ quickbite/
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
-### ✅ Prerequisites
+###  Prerequisites
 - Python 3.8 or above
 - `pip` package manager
 - Git
 
-### 🔧 Installation Steps
+###  Installation Steps
 
 ```bash
 # Clone the repository
@@ -151,7 +151,7 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install Flask Pillow
 ```
 
-### ▶️ Run the Application
+###  Run the Application
 
 ```bash
 python app.py
@@ -161,7 +161,7 @@ Visit [http://127.0.0.1:5000](http://127.0.0.1:5000) to begin.
 
 ---
 
-## 🔄 Usage Workflow
+##  Usage Workflow
 
 1. **User Flow**: Register → Login → Browse Menu → Add to Cart → Place Order
 2. **Admin Flow**: Register (auto logo created) → Login → Manage Menu → View Orders
@@ -169,15 +169,18 @@ Visit [http://127.0.0.1:5000](http://127.0.0.1:5000) to begin.
 
 ---
 
-## 🖼️ Screenshots
+##  Screenshots
+                                                       
+<img width="1362" height="641" alt="Screenshot 2025-07-28 125049" src="https://github.com/user-attachments/assets/fedae9fa-404a-42d3-80ca-37a6490fb1f0" />
+
 
 | Customer Menu | Admin Dashboard | Super Admin Panel |
 |---------------|------------------|--------------------|
-| ![](screenshots/user_menu.png) | ![](screenshots/admin_dash.png) | ![](screenshots/superadmin.png) |
+| <img width="1360" height="647" alt="Screenshot 2025-07-28 125555" src="https://github.com/user-attachments/assets/cd2cab28-7ea6-4de6-a18d-dd17aa57f692" /> | <img width="1357" height="638" alt="Screenshot 2025-07-28 125000" src="https://github.com/user-attachments/assets/2ea4261b-6af4-4888-9128-b2e0efa3ce01" />|<img width="1357" height="640" alt="Screenshot 2025-07-28 125447" src="https://github.com/user-attachments/assets/db8e7c28-7aec-4ae9-a9dc-8526ab8d1913" />|
 
 ---
 
-## 📈 Roadmap
+##  Roadmap
 
 - [ ] Add order history & tracking for users
 - [ ] Search, filter, and sort menus and orders
@@ -188,7 +191,7 @@ Visit [http://127.0.0.1:5000](http://127.0.0.1:5000) to begin.
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a new branch (`git checkout -b feature/your-feature`)
@@ -197,20 +200,20 @@ Visit [http://127.0.0.1:5000](http://127.0.0.1:5000) to begin.
 
 ---
 
-## ⚖️ License
+##  License
 
 This project is licensed under the MIT License.  
 See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
-**Mannu**  
+**Sourav Sharma**  
 Developer & Maintainer  
-📧 your.email@example.com  
-🌐 [GitHub Profile](https://github.com/your-username)
+mr.sourav.sharma.01@gmail.com  
+[GitHub Profile](https://github.com/Sourav-x-3202)
 =======
 # QuickBite-food_ordering_website
 QuickBite is a simple Flask-based food ordering app with local storage, cart management, and an admin panel — no external databases needed.
->>>>>>> 000ee56a4ac0f035bb6592af58556fb52ec7c00e
+
