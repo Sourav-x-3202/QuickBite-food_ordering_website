@@ -207,13 +207,20 @@ See the [LICENSE](LICENSE) file for details.
 
 ---
 
-##  Author
+## Author
 
-**Sourav Sharma**  
-Developer & Maintainer  
-mr.sourav.sharma.01@gmail.com  
-[GitHub Profile](https://github.com/Sourav-x-3202)
-=======
-# QuickBite-food_ordering_website
-QuickBite is a simple Flask-based food ordering app with local storage, cart management, and an admin panel — no external databases needed.
+**Sourav Sharma**
+Developer. Maker. Privacy-first AI enthusiast.
+Find me on GitHub → [@Sourav-x-3202](https://github.com/Sourav-x-3202)
+
+---
+
+
+## Star This Project
+
+If you found this useful, helpful, or inspiring — please consider starring the repository.
+It helps others discover the project and keeps development going 
+
+---
+
 
